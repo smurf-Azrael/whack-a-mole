@@ -1,18 +1,23 @@
-import React from 'react';
+import React from 'react';  
 
-interface MoleProps {
-    isMoleVisible: boolean;
-    onMoleClick: () => void;
-}
+interface MoleProps {  
+  isVisible: boolean;  
+  circleIndex: number;  
+  activeCircle: number | null;  
+}  
 
-export const Mole: React.FC<MoleProps> = ({ isMoleVisible, onMoleClick }) => {
-    return (
-        <div className="mole-hole" onClick={isMoleVisible ? onMoleClick : undefined}>
-            {isMoleVisible ? (
-                <img src="/assets/mole.png" alt="Mole" className="mole-img" />
-            ) : (
-                <div className="empty-hole"></div>
-            )}
-        </div>
-    );
-};
+import moleImageSrc from '../assets/mole.png';  
+
+const Mole: React.FC<MoleProps> = ({ isVisible, circleIndex, activeCircle}) => {  
+  if (!isVisible || circleIndex !== activeCircle) return null;  
+
+  return (  
+    <img  
+      src={moleImageSrc}  
+      alt="Mole"  
+      style={{ width: '100%', height: '80%' }}  
+    />  
+  );  
+};  
+
+export default Mole;

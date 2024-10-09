@@ -1,0 +1,56 @@
+/* src/styles/styles.css */  
+
+body {  
+  font-family: Arial, sans-serif;  
+}  
+
+.game-container {  
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 1rem;  
+}  
+
+.circle {  
+  width: 64px;
+    height: 64px;
+    background-color: #000;
+    border-radius: 100%;
+    border-color: gray;
+    border-style: solid;
+    border-bottom-width: 4px;
+    cursor: pointer;
+    user-select: none;
+}  
+
+.info {  
+  margin-top: 15px;
+  text-align: center;
+ 
+}  
+
+.info div{
+  padding: .4rem 0;
+}
+
+.title {  
+  font-size: 1.2rem ;
+  font-weight: 700;
+  text-align: center;
+}  
+
+.button{
+  text-align: center;
+  padding: .5rem 0;
+}
+
+.win_message{
+  color: green;
+  padding: .5rem 0;
+  text-align: center;
+}
+
+.difficulty-selection{
+  text-align: center;
+  margin: 2rem 0;
+}

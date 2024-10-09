@@ -1,12 +1,8 @@
-import React from 'react';
-import { Game } from './components/Game';
+// src/App.tsx  
 
-const App: React.FC = () => {
-    return (
-        <div className="App">
-            <Game />
-        </div>
-    );
-};
+import React from 'react';  
+import Game from './components/Game';  
+
+const App: React.FC = () => <Game />;  
 
 export default App;
